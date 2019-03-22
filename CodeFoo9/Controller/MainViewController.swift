@@ -39,7 +39,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         videoLabel.textColor = colors.last
         videoImageView.image = videoImageView.image?.withRenderingMode(.alwaysTemplate)
         videoImageView.tintColor = colors.last
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -52,7 +51,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomeCell
-        //cell.frameWidth = Int(collectionView.frame.width)
         (indexPath.item == 0) ? (cell.isVideo = false) : (cell.isVideo = true)
         return cell
     }

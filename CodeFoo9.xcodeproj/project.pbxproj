@@ -23,6 +23,7 @@
 		5C65F08422382AC9002122E0 /* SwipeLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C65F08222382AC9002122E0 /* SwipeLabelCell.swift */; };
 		5C65F08522382AC9002122E0 /* SwipeLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C65F08322382AC9002122E0 /* SwipeLabelCell.xib */; };
 		5CC177A4223984670042D9D6 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC177A3223984670042D9D6 /* DateExtension.swift */; };
+		5CE2DBE4223D6A78003CF2B6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2DBE3223D6A78003CF2B6 /* WebViewController.swift */; };
 		A2647B529E7D55BE9F8B1817 /* Pods_CodeFoo9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F65828BB367ECEFFD6EA00 /* Pods_CodeFoo9.framework */; };
 		ADAFF922002841F8AAEC9BDC /* Pods_CodeFoo9Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE8D45FD7931E07406760E1 /* Pods_CodeFoo9Tests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,7 @@
 		5C65F08222382AC9002122E0 /* SwipeLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeLabelCell.swift; sourceTree = "<group>"; };
 		5C65F08322382AC9002122E0 /* SwipeLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeLabelCell.xib; sourceTree = "<group>"; };
 		5CC177A3223984670042D9D6 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		5CE2DBE3223D6A78003CF2B6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5CEFAF7C7414B0C29D685150 /* Pods-CodeFoo9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeFoo9.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeFoo9/Pods-CodeFoo9.release.xcconfig"; sourceTree = "<group>"; };
 		6522592A5BD86AE9D9513F06 /* Pods-CodeFoo9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeFoo9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeFoo9/Pods-CodeFoo9.debug.xcconfig"; sourceTree = "<group>"; };
 		9BE8D45FD7931E07406760E1 /* Pods_CodeFoo9Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeFoo9Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				5C202E88223398F4002F6A1F /* MainViewController.swift */,
+				5CE2DBE3223D6A78003CF2B6 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				5C202E89223398F4002F6A1F /* MainViewController.swift in Sources */,
 				5C659B1422373ED600FF94E2 /* HomeCell.swift in Sources */,
 				5C202EBC22343D97002F6A1F /* Service.swift in Sources */,
+				5CE2DBE4223D6A78003CF2B6 /* WebViewController.swift in Sources */,
 				5C202E87223398F4002F6A1F /* AppDelegate.swift in Sources */,
 				5CC177A4223984670042D9D6 /* DateExtension.swift in Sources */,
 				5C202EB82233A68E002F6A1F /* ArticleCell.swift in Sources */,

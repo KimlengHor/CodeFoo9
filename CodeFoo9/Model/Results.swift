@@ -24,6 +24,7 @@ struct MetaData: Decodable {
     let title: String?
     let description: String?
     let publishDate: String
+    let slug: String
 }
 
 struct ImageData: Decodable {

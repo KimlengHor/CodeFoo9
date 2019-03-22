@@ -12,8 +12,8 @@ class Service {
     
      static let shared = Service()
     
-    func fetchTheData(completion: @escaping ([DataResults], Error?) -> ()) {
-        let urlString = "https://ign-apis.herokuapp.com/content?startIndex=30&count=15"
+    func fetchTheData(startIndex: Int, completion: @escaping ([DataResults], Error?) -> ()) {
+        let urlString = "https://ign-apis.herokuapp.com/content?startIndex=\(startIndex)&count=10"
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
@@ -35,7 +35,7 @@ class Service {
     
     func fetchTheComment(idsString: String, completion: @escaping ([Content], Error?) -> ()) {
         let urlString = "https://ign-apis.herokuapp.com/comments?ids=\(idsString)"
-        print(urlString)
+        //print(urlString)
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {

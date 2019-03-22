@@ -13,7 +13,7 @@
         <!--Code Foo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CodeFoo9" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainViewController" customModule="CodeFoo9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,7 +218,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Code Foo" id="RI4-Ic-27G"/>
+                    <navigationItem key="navigationItem" title="Code Foo" id="RI4-Ic-27G">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="brn-cP-oLA"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="articleImageView" destination="eqL-ai-zo1" id="hXS-UP-d3f"/>
                         <outlet property="articleLabel" destination="Jsy-On-ElF" id="L4Q-sX-hfG"/>
@@ -228,18 +230,64 @@
                         <outlet property="videoImageView" destination="USN-dB-lJZ" id="jTL-8M-SXg"/>
                         <outlet property="videoLabel" destination="7Ri-4K-Tcc" id="em0-5K-MDW"/>
                         <outlet property="videoStackView" destination="GLM-H1-11E" id="r5c-Bc-Oef"/>
+                        <segue destination="6cO-Vh-1L3" kind="showDetail" identifier="WebVC" id="get-0P-mZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1073.913043478261" y="132.58928571428572"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="y5g-LE-ocQ">
+            <objects>
+                <viewController storyboardIdentifier="WebVC" id="6cO-Vh-1L3" customClass="WebViewController" customModule="CodeFoo9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ani-V7-dPs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nLH-Zj-AlJ">
+                                <rect key="frame" x="0.0" y="93" width="375" height="685"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZr-8T-LGU">
+                                <rect key="frame" x="315" y="52" width="45" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="6cO-Vh-1L3" eventType="touchUpInside" id="mqP-De-MT7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Prc-j9-uuB" firstAttribute="bottom" secondItem="nLH-Zj-AlJ" secondAttribute="bottom" id="VcK-yu-1YE"/>
+                            <constraint firstItem="Prc-j9-uuB" firstAttribute="trailing" secondItem="OZr-8T-LGU" secondAttribute="trailing" constant="15" id="aqg-qU-mxT"/>
+                            <constraint firstItem="OZr-8T-LGU" firstAttribute="top" secondItem="Prc-j9-uuB" secondAttribute="top" constant="8" id="lde-J3-oHi"/>
+                            <constraint firstItem="nLH-Zj-AlJ" firstAttribute="top" secondItem="OZr-8T-LGU" secondAttribute="bottom" constant="5" id="qfP-7N-wUR"/>
+                            <constraint firstItem="nLH-Zj-AlJ" firstAttribute="leading" secondItem="Prc-j9-uuB" secondAttribute="leading" id="wDd-es-box"/>
+                            <constraint firstItem="Prc-j9-uuB" firstAttribute="trailing" secondItem="nLH-Zj-AlJ" secondAttribute="trailing" id="xmu-0n-oo5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Prc-j9-uuB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FTl-sa-wDI"/>
+                    <connections>
+                        <outlet property="webView" destination="nLH-Zj-AlJ" id="NC4-Rx-qhp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jU-3X-FZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1941.5999999999999" y="131.52709359605913"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="u59-Vu-nbc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lkq-XE-avG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g8R-oZ-TJc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="g8R-oZ-TJc">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.74117647058823533" green="0.090196078431372548" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
