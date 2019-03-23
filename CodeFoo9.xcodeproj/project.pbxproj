@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		224F818A17A10784B39A94A4 /* Pods_CodeFoo9UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD884F02ED60AC9A88A86226 /* Pods_CodeFoo9UITests.framework */; };
+		5C02031C2246962D00794756 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5C02031B2246962D00794756 /* README.md */; };
 		5C202E87223398F4002F6A1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C202E86223398F4002F6A1F /* AppDelegate.swift */; };
 		5C202E89223398F4002F6A1F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C202E88223398F4002F6A1F /* MainViewController.swift */; };
 		5C202E8C223398F4002F6A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C202E8A223398F4002F6A1F /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		4D6E5CFB6F9C9BEF2C05EDBF /* Pods-CodeFoo9UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeFoo9UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeFoo9UITests/Pods-CodeFoo9UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5C02031B2246962D00794756 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5C202E83223398F4002F6A1F /* CodeFoo9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeFoo9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C202E86223398F4002F6A1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C202E88223398F4002F6A1F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				5C202E8D223398F6002F6A1F /* Assets.xcassets */,
 				5C202E8F223398F6002F6A1F /* LaunchScreen.storyboard */,
 				5C202E92223398F6002F6A1F /* Info.plist */,
+				5C02031B2246962D00794756 /* README.md */,
 			);
 			path = CodeFoo9;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			files = (
 				5C202E91223398F6002F6A1F /* LaunchScreen.storyboard in Resources */,
 				5C202E8E223398F6002F6A1F /* Assets.xcassets in Resources */,
+				5C02031C2246962D00794756 /* README.md in Resources */,
 				5C202E8C223398F4002F6A1F /* Main.storyboard in Resources */,
 				5C65F08522382AC9002122E0 /* SwipeLabelCell.xib in Resources */,
 			);

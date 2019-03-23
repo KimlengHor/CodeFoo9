@@ -42,26 +42,17 @@ class HomeCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionVi
                 print("Failed to fetch data ", error)
                 return
             } else {
-                //if self.isVideo {
-                    data.forEach({ (results) in
-                        if results.contentType == "video" {
-                            self.videoResults.append(results)
-                        }
-                        
-                        if results.contentType == "article" {
-                            self.articleResults.append(results)
-                        }
-                    })
-                    self.videoResults.forEach({self.ids.append($0.contentId)})
-                //} else {
-//                    data.forEach({ (results) in
-//                        if results.contentType == "article" {
-//                            self.articleResults.append(results)
-//                        }
-//                    })
-                    self.articleResults.forEach({self.ids.append($0.contentId)})
-                //}
-                
+                data.forEach({ (results) in
+                    if results.contentType == "video" {
+                        self.videoResults.append(results)
+                    }
+                    
+                    if results.contentType == "article" {
+                        self.articleResults.append(results)
+                    }
+                })
+                self.videoResults.forEach({self.ids.append($0.contentId)})
+                self.articleResults.forEach({self.ids.append($0.contentId)})
                 self.fetchComment()
             }
         }
@@ -120,13 +111,11 @@ class HomeCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionVi
         if (articleResults.count != 20 && videoResults.count != 20) {
             if (indexPath.row + 1 == articleResults.count) {
                 fetchData()
-                //print(articleResults.count, videoResults.count)
             }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let mainController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainVC") as! MainViewController
         let webViewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebVC") as! WebViewController
         if isVideo {
             let year = getDate(data: videoResults, index: indexPath.row - 1).year
@@ -141,10 +130,7 @@ class HomeCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionVi
             webViewVC.urlString = "https://www.ign.com/articles/\(year)/\(month)/\(day)/\(articleResults[indexPath.row - 1].metadata.slug)"
             print(webViewVC.urlString)
         }
-        //mainController.navigationController?.pushViewController(webViewVC, animated: true)
-//        UIApplication.shared.keyWindow?.rootViewController?.navigationController?.pushViewController(webViewVC, animated: true)
         UIApplication.shared.keyWindow?.rootViewController?.present(webViewVC, animated: true, completion: nil)
-        //print(articleResults[indexPath.row - 1].metadata.slug)
     }
     
     func getDate(data: [DataResults], index: Int) -> (year: String, month: String, day: String) {
